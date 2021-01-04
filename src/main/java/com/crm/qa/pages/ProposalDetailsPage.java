@@ -7,23 +7,22 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import com.crm.qa.utilities.TestUtil;
 
-public class OpportunityDetailsPage extends TestBase {
-
-    @FindBy(xpath="//h2[text()='Opportunity Detail']")
-    WebElement OpportunityDetail_Label;
+public class ProposalDetailsPage extends TestBase{
+    @FindBy(xpath="//h2[text()='Proposal Detail']")
+    WebElement ProposalDetail_Label;
 
     @FindBy(xpath="//input[@name='edit' and @type='button']")
     WebElement EditBtn;
 
-    public OpportunityDetailsPage()
+    public ProposalDetailsPage()
     {
         PageFactory.initElements(driver, this);
     }
 
-    public boolean ValidateOpportunityDetailLabel()
+    public boolean ValidateProposalDetailLabel()
     {
-        TestUtil.WaitForElementToBeVisible(driver,OpportunityDetail_Label,50);
-        return OpportunityDetail_Label.isDisplayed();
+        TestUtil.WaitForElementToBeVisible(driver,ProposalDetail_Label,50);
+        return ProposalDetail_Label.isDisplayed();
     }
 
     public boolean ValidateVisibilityofEditButton()
@@ -31,4 +30,5 @@ public class OpportunityDetailsPage extends TestBase {
         TestUtil.WaitForElementToBeVisible(driver,EditBtn,50);
         return EditBtn.isDisplayed();
     }
+
 }
